@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from './components/header';
+import Footer from './components/footer';
+import Home from './components/home';
+import About from './components/about';
 
+import ItemPage from './components/itemPage';
+import {Authenticator} from "@aws-amplify/ui-react";
+
+import Items from "./components/items"
+import Book from "./components/books"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Header />
+            <Authenticator loginMechanisms={['email']} signUpAttributes={['name']}>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/About' element={<About/>}/>
+                <Route path='/items' element={<Items/>}/>
+                <Route path='/book' element={<Book/>}/>
+                <Route path='/items/:id' element={<ItemPage/>}/>
+            </Routes>
+            </Authenticator>
+            <Footer />
+        </Router>
+
+    );
 }
 
 export default App;
