@@ -29,6 +29,7 @@ export default function ItemPage() {
 
     }, []);
     return (
+
         <div className="container is-fluid">
             <section className="section">
                 <h1 className="title">{item?.name}</h1>
@@ -36,5 +37,7 @@ export default function ItemPage() {
                 <p className="content">${item?.price}</p>
             </section>
         </div>
+
+
     );
 }
