@@ -27,6 +27,7 @@ export default function about() {
 
                 <p className="title"></p>
                 <p className="subtitle"></p>
+                <p className="subtitle">meowww</p>
             </div>
         </section>
 
