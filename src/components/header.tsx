@@ -3,27 +3,37 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
-                <a className="navbar-item" href="https://bulma.io">
+        <section className="hero is-small is-primary">
 
-                </a>
-
-                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-start">
-                    <Link to='/' className='navbar-item'></Link>
-                    <Link to='/about' className='navbar-item'></Link>
-                    <Link to='/items' className='navbar-item'></Link>
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c46c7f62556223.5a945f059c90e.png"
+                 width={100} height={100} alt="Logo "/>
+            <div className="hero-body">
+                <div id="navbarMenuHeroA" className="navbar-menu">
+                    <div className="navbar-end">
+                        {/*<a className="navbar-item is-active"> Home </a>*/}
+                        <Link to='/' className='navbar-item'>Home</Link>
+                        <Link to='/book' className='navbar-item'>books</Link>
+                        <Link to='/about' className='navbar-item'>About</Link>
+                        <a className="navbar-item"> comments </a>
+                        <Link to='/items' className='navbar-item'>Items</Link>
+                        <span className="navbar-item">
+              <a className="button is-primary is-inverted">
+                <span className="icon">
+                  <i className="fab fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+                    </div>
                 </div>
+
+
+                <p className="title">this is item page</p>
+                <p className="subtitle"></p>
             </div>
-        </nav>
+        </section>
+
+
     );
 
 

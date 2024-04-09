@@ -7,37 +7,7 @@ export default function Home() {
 
             <div className="hero-head">
                 <nav className="navbar">
-                    <div className="container">
-                        <div className="navbar-brand">
-                            <a className="navbar-item">
-                                <img src="https://bulma.io/assets/images/bulma-type-white.png" alt="Logo"/>
-                            </a>
-                            <span className="navbar-burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-                        </div>
-                        <div id="navbarMenuHeroA" className="navbar-menu">
-                            <div className="navbar-end">
-                                {/*<a className="navbar-item is-active"> Home </a>*/}
-                                <Link to='/' className='navbar-item'>Home</Link>
-                                <Link to='/book' className='navbar-item'>books</Link>
-                                <Link to='/about' className='navbar-item'>About</Link>
-                                <a className="navbar-item"> comments </a>
-                                <Link to='/items' className='navbar-item'>Items</Link>
-                                <span className="navbar-item">
-              <a className="button is-primary is-inverted">
-                <span className="icon">
-                  <i className="fab fa-github"></i>
-                </span>
-                <span>Download</span>
-              </a>
-            </span>
-                            </div>
-                        </div>
-                    </div>
+
                 </nav>
             </div>
 
