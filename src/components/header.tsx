@@ -16,6 +16,7 @@ export default function Home() {
                         <Link to='/about' className='navbar-item'>About</Link>
                         <a className="navbar-item"> comments </a>
                         <Link to='/items' className='navbar-item'>Items</Link>
+                         <Link to='/admin' className='navbar-item'>Admin</Link>
                         <span className="navbar-item">
 
             </span>

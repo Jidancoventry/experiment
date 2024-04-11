@@ -3,9 +3,24 @@ import ItemService from "../services/ItemServices";
 import { Item } from "../types/item";
 import { Link } from "react-router-dom";
 
-export default function Items() {
+export default function Itemsadmin() {
 
     const [items, setItems] = useState<Item[]>([]);
+
+    const deleteItems =(id:string) => {
+        ItemService.remove(id)
+        .then((response:any) => {
+            alert(response.data);
+            getItems();
+        })
+        .catch((e:Error) => {
+            console.log(e);
+            alert(e.message);
+        })
+
+    }
+
+
 
     const getItems = () => {
 
@@ -19,6 +34,7 @@ export default function Items() {
                 console.log(e);
                 alert(e.message);
             })
+
     }
 
     useEffect(() => {
@@ -42,8 +58,12 @@ export default function Items() {
                                     <p className="content">${item.price}</p>
                                 </div>
                                 <div className="card-footer">
-                                    <Link className="button is-rounded is-danger" to={`/items/${item.id}`}>View Item</Link>
-
+                                    <Link className="button is-rounded is-danger" to={`/items/${item.id}`}>View
+                                        Item</Link>
+                                    <button className="button is-rounded is-info" onClick={() => {
+                                        deleteItems(item.id)
+                                    }}>Delete Item
+                                    </button>
                                 </div>
                             </div>
                         </div>
