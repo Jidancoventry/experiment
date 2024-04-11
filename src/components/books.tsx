@@ -5,7 +5,7 @@ export default function Book() {
 
     return (
 
-        <section className="hero is-small is-primary">
+        <section className="hero is-small is-info">
             <div className="hero-body">
 
                 <p className="title"></p>
